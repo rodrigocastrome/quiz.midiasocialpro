@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title>Mídia Social Pro</title>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="msp.png">
+<style>
+    header {
+      background:"headerbg2.png";
+      background-repeat: no-repeat;
+    }
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+	  background-color: #ADD8E6;
+	background-color: #5AABFA;    
+	 
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px black;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #ADD8E6;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+    .black h1 {
+      color: #FFBA15;
+    }
+    .black p {
+      font-size: 18px;
+      color: white;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+<div class="black">
+<div id="primeira">
+<div class="question">
+<h1>Pergunta 1</h1>
+<p>Você realmente quer descobrir como pessoas comuns estão ganhando de R$ 50 a R$ 150 por hora para trabalhar nas redes sociais. Mesmo sem experiência.
+E trabalhando em casa. </p>
+</div>
+<div class="answer">
+<button class="btn" onclick="segunda()">SIM</button>
+<button class="btn" onclick="segunda()">NÃO</button>
+</div>
+</div>
+<div id="segunda" class="hide">
+<div class="question">
+<h1>Pergunta 2</h1>
+<p>Que tipo de trabalho você está procurando?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="terceira()">Será minha renda complementar (de R$ 1.500 a R$ 3.000 por mês)</button>
+<button class="btn" onclick="terceira()">Trabalho em tempo integral (de R$ 3.000 a R$ 6.000 por mês)</button>
+</div>
+</div>
+<div id="terceira" class="hide">
+<div class="question">
+<h1>Pergunta 3</h1>
+<p>Qual é a sua plataforma de mídia social favorita?</p>
+</div>
+<div class="answer">
+
+<button class="btn" onclick="redirectfb()">Facebook</button>
+<button class="btn" onclick="redirectyt()">Youtube</button>
+<button class="btn" onclick="redirectig()">Instagram</button>
+<button class="btn" onclick="redirecttw()">Twitter</button>
+
+
+</div>
+</div>
+</div>
+<p style="text-color:#fffff ; text-align: center; font-weight: bold;">© 2022 – MidiaSocialPro Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.</p>
+</div>
+<script>
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+		function redirectfb() {
+      location.href = "https://midiasocialpro.com.br/quiz-fb"
+    }
+	    function redirectyt() {
+      location.href = "https://midiasocialpro.com.br/quiz-yt"
+    }
+	    function redirecttw() {
+      location.href = "https://midiasocialpro.com.br/quiz-tw"
+    }
+	    function redirectig() {
+      location.href = "https://midiasocialpro.com.br/quiz-ig"
+    }
+  </script>
+</body>
+</html>
